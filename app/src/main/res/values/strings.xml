@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AdamApp</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="playing_basketball">PLAYING BASKETBALL</string>
+    <string name="playing_video_games">PLAYING VIDEO GAMES</string>
+    <string name="tasting_different_cuisine">TASTING DIFFERENT CUISINE</string>
+</resources>

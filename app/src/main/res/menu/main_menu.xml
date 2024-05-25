@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Home"/>
+
+        <item android:id="@+id/about"
+            android:icon="@drawable/aboutme"
+            android:title="About Me"/>
+
+        <item android:id="@+id/hobi"
+            android:icon="@drawable/hobbies"
+            android:title="Hobbies"/>
+
+        <item android:id="@+id/skill"
+            android:icon="@drawable/skills"
+            android:title="Skills"/>
+
+        <item android:id="@+id/timeTable"
+            android:icon="@drawable/timetable"
+            android:title="Timetable"/>
+
+        <item android:id="@+id/contact"
+            android:icon="@drawable/baseline_photo_camera_24"
+            android:title="Contact"/>
+    </group>
+    <item android:icon="@drawable/baseline_link_24" android:title="Links">
+        <menu>
+            <group>
+            <item android:id="@+id/uni"
+                android:title="UiTM" />
+
+            <item android:id="@+id/student"
+                android:title="Student Portal"/>
+            </group>
+        </menu>
+    </item>
+</menu>

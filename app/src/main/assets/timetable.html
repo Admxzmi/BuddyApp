@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+            body{
+                background-color: antiquewhite;
+            }
+            table, th, td, tr{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            @media(max-width: 412px){
+                table, th, td, tr{
+                    width: 10%;
+                    height: 10%;
+                }
+            }
+        </style>
+    <script>
+            function showCourse(courseCode) {
+
+                var courseDetails = {
+                    'CSC580': {
+                        courseCode : "CSC580",
+                        courseName: "Parallel Processing",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                    'CSC577': {
+                        courseCode : "CSC577",
+                        courseName: "Mobile Programming",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                    'CSC649': {
+                        courseCode : "CSC649",
+                        courseName: "Special Topics",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                    'CSP600': {
+                        courseCode : "CSP600",
+                        courseName: "Project Formulation",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                    'TMC501': {
+                        courseCode : "TMC501",
+                        courseName: "Mandarin III",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                    'CSC645': {
+                        courseCode : "CSC645",
+                        courseName: "Algorithm Analysis & Design",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                    'ENT600': {
+                        courseCode : "ENT600",
+                        courseName: "Technology Entrepreneurship",
+                        lecturerName: "abc",
+                        emailAddress: "abc@gmail.com"
+                    },
+
+                };
+
+                if (courseCode in courseDetails) {
+                    var details = courseDetails[courseCode];
+                    document.getElementById("courseCode").innerHTML = "Course Code: " + details.courseCode;
+                    document.getElementById("courseName").innerHTML = "Course Name: " + details.courseName;
+                    document.getElementById("lecturerName").innerHTML = "Lecturer: " + details.lecturerName;
+                    document.getElementById("emailAddress").innerHTML = "Email: " + details.emailAddress;
+                }
+            }
+        </script>
+    <title>Timetable</title>
+</head>
+<body>
+<h1>Timetable CS2305B</h1>
+<br>
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+    </tr>
+
+    <tr aria-rowspan="2">
+        <td>8.00 am - 9.00 am</td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC580')">CSC580<br>ODL</a></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC577')">CSC577<br>ODL</a></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC649')">CSC649<br>F2F</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9.00 am - 10.00 am</td>
+        <td></td>
+    </tr>
+
+    <tr aria-rowspan="2">
+        <td>10.00 am - 11.00 am</td>
+        <td></td>
+        <td></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSP600')">CSP600<br>ODL</a></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSP600')">CSP600<br>ODL</a></td>
+    </tr>
+    <tr>
+        <td>11.00 am - 12.00 pm</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr aria-rowspan="2">
+        <td>12.00 pm - 1.00 pm</td>
+        <td></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC645')">CSC645<br>F2F</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>1.00 pm - 2.00 pm</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr aria-rowspan="2">
+        <td>2.00 pm - 3.00 pm</td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC649')">CSC649<br>ODL</a></td>
+        <td></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC577')">CSC577<br>F2F</a></td>
+        <td rowspan="3"><a href="#" onclick="showCourse('ENT600')">ENT600<br>F2F</a></td>
+    </tr>
+    <tr>
+        <td>3.00 pm - 4.00 pm</td>
+        <td></td>
+        <td></td>
+
+    </tr>
+
+    <tr aria-rowspan="2">
+        <td>4.00 pm - 5.00 pm</td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC645')">CSC645<br>F2F</a></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('TMC501')">TMC501<br>F2F</a></td>
+        <td rowspan="2"><a href="#" onclick="showCourse('CSC580')">CSC580<br>F2F</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>5.00 pm - 6.00 pm</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<div id="Course">
+    <h2>Course Details</h2>
+    <p id="courseCode"></p>
+    <p id="courseName"></p>
+    <p id="lecturerName"></p>
+    <p id="emailAddress"></p>
+</div>
+
+</body>
+</html>
